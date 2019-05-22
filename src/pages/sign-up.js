@@ -21,7 +21,6 @@ const SecondPage = () => {
           type="email"
           name="email"
           onChange={handleChange}
-          required
         />
         <input
           placeholder="senha"
