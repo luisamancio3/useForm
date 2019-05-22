@@ -1,19 +1,20 @@
 import React from "react"
+import { Link } from "gatsby"
 import useForm from "../components/helpers/useForm"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Link } from "gatsby"
 
-const form = () => {
-  const { values, handleChange, handleSubmit } = useForm(login)
+const SecondPage = () => {
+  const { values, handleChange, handleSubmit } = useForm(cadastro)
 
-  function login() {
+  function cadastro() {
     console.log(values)
   }
 
   return (
     <Layout>
-      <SEO title="login" />
+      <SEO title="Cadastro" />
       <form onSubmit={handleSubmit}>
         <input
           placeholder="email"
@@ -29,11 +30,11 @@ const form = () => {
           onChange={handleChange}
           required
         />
-        <button type="submit">Login</button>
+        <button type="submit">Cadastrar</button>
       </form>
-      <Link to="/sign-up">Cadastre-se</Link>
+      <Link to="/">Login</Link>
     </Layout>
   )
 }
 
-export default form
+export default SecondPage
